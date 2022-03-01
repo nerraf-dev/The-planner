@@ -1,0 +1,194 @@
+.timetable {  display: grid;
+  grid-template-columns: 0.8fr 0.4fr 0.7fr 0.7fr 0.7fr 0.7fr 0.5fr 0.7fr 0.7fr 0.7fr 0.7fr 0.7fr 1.4fr 0.7fr 0.7fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  justify-content: center;
+  grid-template-areas:
+    "tt-blank tt-head-form tt-head-p1 tt-head-p2 tt-head-p3 tt-head-p4 tt-head-break tt-head-p5 tt-head-p6 tt-head-p7 tt-head-p8 tt-head-p9 tt-head-lunch tt-head-p10 tt-head-p11"
+    "monday mon-form mon-p1 mon-p2 mon-p3 mon-p4 mon-break mon-p5 mon-p6 mon-p7 mon-p8 mon-p9 mon-lunch mon-p10 mon-p11"
+    "tuesday tue-form tue-p1 tue-p2 tue-p3 tue-p4 tue-break tue-p5 tue-p6 tue-p7 tue-p8 tue-p9 tue-lunch tue-p10 tue-p11"
+    "wednesday wed-form wed-p1 wed-p2 wed-p3 wed-p4 wed-break wed-p5 wed-p6 wed-p7 wed-p8 wed-p9 wed-lunch wed-p10 wed-p11"
+    "thursday thu-form thu-p1 thu-p2 thu-p3 thu-p4 thu-break thu-p5 thu-p6 thu-p7 thu-p8 thu-p9 thu-lunch thu-p10 thu-p11"
+    "friday fri-form fri-p1 fri-p2 fri-p3 fri-p4 fri-break fri-p5 fri-p6 fri-p7 fri-p8 fri-p9 fri-lunch fri-p10 fri-p11";
+}
+
+.mon-p1 { grid-area: mon-p1; }
+
+.mon-p2 { grid-area: mon-p2; }
+
+.mon-p3 { grid-area: mon-p3; }
+
+.mon-p4 { grid-area: mon-p4; }
+
+.mon-break { grid-area: mon-break; }
+
+.mon-p5 { grid-area: mon-p5; }
+
+.mon-p6 { grid-area: mon-p6; }
+
+.mon-p7 { grid-area: mon-p7; }
+
+.mon-p8 { grid-area: mon-p8; }
+
+.mon-p9 { grid-area: mon-p9; }
+
+.mon-lunch { grid-area: mon-lunch; }
+
+.mon-p10 { grid-area: mon-p10; }
+
+.mon-p11 { grid-area: mon-p11; }
+
+.monday { grid-area: monday; }
+
+.tuesday { grid-area: tuesday; }
+
+.wednesday { grid-area: wednesday; }
+
+.thursday { grid-area: thursday; }
+
+.friday { grid-area: friday; }
+
+.tue-p1 { grid-area: tue-p1; }
+
+.tue-p2 { grid-area: tue-p2; }
+
+.tue-p3 { grid-area: tue-p3; }
+
+.tue-p4 { grid-area: tue-p4; }
+
+.tue-break { grid-area: tue-break; }
+
+.tue-p5 { grid-area: tue-p5; }
+
+.tue-p6 { grid-area: tue-p6; }
+
+.tue-p7 { grid-area: tue-p7; }
+
+.tue-p8 { grid-area: tue-p8; }
+
+.tue-p9 { grid-area: tue-p9; }
+
+.tue-lunch { grid-area: tue-lunch; }
+
+.tue-p10 { grid-area: tue-p10; }
+
+.tue-p11 { grid-area: tue-p11; }
+
+.wed-lunch { grid-area: wed-lunch; }
+
+.thu-lunch { grid-area: thu-lunch; }
+
+.fri-lunch { grid-area: fri-lunch; }
+
+.wed-break { grid-area: wed-break; }
+
+.thu-break { grid-area: thu-break; }
+
+.fri-break { grid-area: fri-break; }
+
+.wed-p1 { grid-area: wed-p1; }
+
+.wed-p2 { grid-area: wed-p2; }
+
+.wed-p3 { grid-area: wed-p3; }
+
+.wed-p4 { grid-area: wed-p4; }
+
+.wed-p5 { grid-area: wed-p5; }
+
+.wed-p6 { grid-area: wed-p6; }
+
+.wed-p7 { grid-area: wed-p7; }
+
+.wed-p8 { grid-area: wed-p8; }
+
+.wed-p9 { grid-area: wed-p9; }
+
+.wed-p10 { grid-area: wed-p10; }
+
+.wed-p11 { grid-area: wed-p11; }
+
+.thu-p1 { grid-area: thu-p1; }
+
+.fri-p1 { grid-area: fri-p1; }
+
+.thu-p2 { grid-area: thu-p2; }
+
+.thu-p3 { grid-area: thu-p3; }
+
+.thu-p4 { grid-area: thu-p4; }
+
+.thu-p5 { grid-area: thu-p5; }
+
+.thu-p6 { grid-area: thu-p6; }
+
+.thu-p7 { grid-area: thu-p7; }
+
+.thu-p8 { grid-area: thu-p8; }
+
+.thu-p9 { grid-area: thu-p9; }
+
+.thu-p11 { grid-area: thu-p11; }
+
+.thu-p10 { grid-area: thu-p10; }
+
+.fri-p2 { grid-area: fri-p2; }
+
+.fri-p3 { grid-area: fri-p3; }
+
+.fri-p4 { grid-area: fri-p4; }
+
+.fri-p5 { grid-area: fri-p5; }
+
+.fri-p6 { grid-area: fri-p6; }
+
+.fri-p7 { grid-area: fri-p7; }
+
+.fri-p8 { grid-area: fri-p8; }
+
+.fri-p9 { grid-area: fri-p9; }
+
+.tt-head-p1 { grid-area: tt-head-p1; }
+
+.tt-head-p2 { grid-area: tt-head-p2; }
+
+.tt-head-p3 { grid-area: tt-head-p3; }
+
+.tt-head-p4 { grid-area: tt-head-p4; }
+
+.tt-head-break { grid-area: tt-head-break; }
+
+.tt-head-p5 { grid-area: tt-head-p5; }
+
+.tt-head-p6 { grid-area: tt-head-p6; }
+
+.tt-head-p7 { grid-area: tt-head-p7; }
+
+.tt-head-p8 { grid-area: tt-head-p8; }
+
+.tt-head-p9 { grid-area: tt-head-p9; }
+
+.tt-head-lunch { grid-area: tt-head-lunch; }
+
+.tt-head-p10 { grid-area: tt-head-p10; }
+
+.tt-head-p11 { grid-area: tt-head-p11; }
+
+.tt-blank { grid-area: tt-blank; }
+
+.tt-head-form { grid-area: tt-head-form; }
+
+.mon-form { grid-area: mon-form; }
+
+.tue-form { grid-area: tue-form; }
+
+.wed-form { grid-area: wed-form; }
+
+.thu-form { grid-area: thu-form; }
+
+.fri-form { grid-area: fri-form; }
+
+.fri-p10 { grid-area: fri-p10; }
+
+.fri-p11 { grid-area: fri-p11; }
