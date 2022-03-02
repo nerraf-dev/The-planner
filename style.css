@@ -1,5 +1,6 @@
-.timetable {  display: grid;
-  grid-template-columns: 0.8fr 0.4fr 0.7fr 0.7fr 0.7fr 0.7fr 0.5fr 0.7fr 0.7fr 0.7fr 0.7fr 0.7fr 1.4fr 0.7fr 0.7fr;
+.timetable {  
+  display: grid;
+  grid-template-columns: 0.8fr 0.4fr 0.7fr 0.7fr 0.7fr 0.7fr 0.5fr 0.7fr 0.7fr 0.7fr 0.7fr 0.7fr 1fr 0.7fr 0.7fr;
   grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
   gap: 0px 0px;
   grid-auto-flow: row;
@@ -11,6 +12,11 @@
     "wednesday wed-form wed-p1 wed-p2 wed-p3 wed-p4 wed-break wed-p5 wed-p6 wed-p7 wed-p8 wed-p9 wed-lunch wed-p10 wed-p11"
     "thursday thu-form thu-p1 thu-p2 thu-p3 thu-p4 thu-break thu-p5 thu-p6 thu-p7 thu-p8 thu-p9 thu-lunch thu-p10 thu-p11"
     "friday fri-form fri-p1 fri-p2 fri-p3 fri-p4 fri-break fri-p5 fri-p6 fri-p7 fri-p8 fri-p9 fri-lunch fri-p10 fri-p11";
+  border: solid 1px black;
+}
+
+.cell{
+  border:solid 1px gray;
 }
 
 .mon-p1 { grid-area: mon-p1; }
@@ -192,3 +198,13 @@
 .fri-p10 { grid-area: fri-p10; }
 
 .fri-p11 { grid-area: fri-p11; }
+
+
+@media (max-width: 834px) {
+  .tt-header {
+    display: none;
+  }
+  .timetable{
+    display: block;
+  }
+}
