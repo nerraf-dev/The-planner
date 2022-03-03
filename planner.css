@@ -1,0 +1,12 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.timetable{
+    padding: 1vw;
+}
+
+.lesson{
+    font-family: 'Courier New', Courier, monospace;
+}
