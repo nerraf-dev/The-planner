@@ -108,9 +108,9 @@ body{
 		display: flex;
 		flex-direction: row ;
 	}
-	.notes {
-		/* min-width: 50%; */
-	}
+	/* .notes {
+		min-width: 50%;
+	} */
 	
 	.input {
 		min-width: 40%;
