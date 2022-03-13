@@ -104,15 +104,15 @@ body{
 	}
 	
 	/* Notes Section */
-	.notes-container{
+	.note-container{
 		display: flex;
 		flex-direction: row ;
 	}
-	/* .notes {
-		min-width: 50%;
-	} */
-	
+
 	.input {
 		min-width: 40%;
+	}
+	.notes {
+		display: block;
 	}
 }
