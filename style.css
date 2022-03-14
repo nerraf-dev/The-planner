@@ -3,9 +3,12 @@
 	padding: 0;
 }
 
+html{
+	font-size: 16px;
+}
 body{
 	margin: 1vw;
-	font-size: 1em;
+	font-size: 1rem;
 	font-family: Helvetica, Arial, sans-serif;
 }
 
@@ -13,9 +16,6 @@ body{
 	width: 100%;
 	padding: 1vw;
 }
-
-
-
 	
 .timetable{
 	display: block;
@@ -29,9 +29,6 @@ body{
 }
 
 
-
-
-
 @media (min-width: 992px){
 	
 	.timetable {  
@@ -43,8 +40,8 @@ body{
 		grid-auto-flow: row;
 		justify-content: center;
 		grid-template-areas:
-			"day form p1 p2 p3 p4 break p5 p6 p7 p8 p9 lunch p10 p11";
-	
+			"day form-grp p1 p2 p3 p4 break p5 p6 p7 p8 p9 lunch p10 p11";
+
 		text-align: center;
 	}
 	
@@ -54,18 +51,16 @@ body{
 	}
 	  
 	.day { 
-		/* padding-bottom: 1em; */
 		grid-area: day; 
 		width: 1fr;
 		/* overflow: hidden;
 		text-overflow: clip; */
 		text-align: left;
-		font-size: 0.9em;
-		
+		font-size: 0.9rem;
 	}
 	
-	.form { 
-		grid-area: form; 
+	.form-grp { 
+		grid-area: form-grp; 
 		/* margin-left: 1vw; */
 	}
 	
@@ -107,6 +102,8 @@ body{
 	.note-container{
 		display: flex;
 		flex-direction: row ;
+		padding-top: 1vw;
+		border-top: solid 2px;
 	}
 
 	.input {
@@ -114,5 +111,44 @@ body{
 	}
 	.notes {
 		display: block;
+		min-width: 20vw;
 	}
+	.notes-list{
+		list-style: none;
+	}
+	.note-checkbox {
+		margin-right: 10px;
+	}
+	.note-text {
+		flex-grow: 1;
+		  /*  overflow settings for long items
+		 - prevent any wrapping
+		 - hide the overflow
+		 - replace with ... to indicate more */
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		/* word-wrap: break-word; */  
+	}
+
+	.note-delete-btn {
+		float: right;
+		border: none;
+		outline: none;
+		/* border-radius: 7px; */
+		padding: 2px 0.5vw;
+		margin-left: 10px;
+		/* color: #050505; */
+		background-color:lightcoral;
+	}
+	  /* applied when the note item is checked */
+	.note-checked { 
+		text-decoration: line-through;
+		color: #63626275;
+		/* background-color: rgba(228, 228, 228, 0.4); */
+		background-color: rgb(245, 245, 245);
+	
+	}
+
 }
+/* end of med-lrg */

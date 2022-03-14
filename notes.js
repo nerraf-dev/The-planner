@@ -81,3 +81,55 @@ function addToLocalStorage(todos){
     //render to the screen
     renderNotes(notes);
 }
+
+  //Get the items from local storage on page refresh
+  function getFromLocalStorage(){
+    const reference = localStorage.getItem('notes')
+    //if reference exists
+    if (reference){
+        //convert JSON back to array
+        notes = JSON.parse(reference);
+        renderNotes(notes);
+    }
+}
+
+//toggle complete
+function completeToggle(id){
+    notes.forEach(function(item){
+        if (item.id == id){
+            //toggle item
+            item.completed = !item.completed;
+        }
+    });
+    //Update storage
+    addToLocalStorage(notes);
+}
+
+//deletes the todo item
+function deleteNote(id){
+  //   filters out <li> with id and updates array
+  notes = notes.filter(function(item){
+      return item.id != id;
+  });
+  //Update storage
+  addToLocalStorage(notes);
+}
+
+
+//initially get from local
+getFromLocalStorage();
+
+// set toggle and delete.
+// addEventListener on <ul> has class todo-items. Listen to click on checkbox or delete
+noteList.addEventListener('click',function(event){
+    //check if on checkbox or delete button
+    if (event.target.type === 'checkbox'){
+        //toggle state
+        completeToggle(event.target.parentElement.getAttribute('data-key'));
+    }
+
+    if(event.target.classList.contains('note-delete-btn')){
+        //get id from data-key or parent <li> 
+          deleteNote(event.target.parentElement.getAttribute('data-key'));        
+    }
+});
