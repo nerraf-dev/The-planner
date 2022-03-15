@@ -4,7 +4,10 @@ const noteAddBtn = document.querySelector(".note-add");
 const noteInputText = document.querySelector(".note-input-text");
 // Note list
 const noteList = document.querySelector(".notes-list");
-
+//get date
+const today = new Date();
+console.log(today.toDateString());
+document.querySelector(".page-date").innerHTML = today.toDateString();
 //Array to store the note items
 //array will contain note objects. the object has id, name, completed (see below! *1)
 let notes = [];

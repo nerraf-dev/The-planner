@@ -28,7 +28,6 @@ body{
 	display: none;
 }
 
-
 @media (min-width: 992px){
 	
 	.timetable {  
@@ -41,7 +40,6 @@ body{
 		justify-content: center;
 		grid-template-areas:
 			"day form-grp p1 p2 p3 p4 break p5 p6 p7 p8 p9 lunch p10 p11";
-
 		text-align: center;
 	}
 	
