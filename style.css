@@ -16,137 +16,168 @@ body{
 	width: 100%;
 	padding: 1vw;
 }
-	
-.timetable{
-	display: block;
-	padding: 0.5vw 0.5vw;
-}
-.p1{
-	background-color: aqua;
-}
-.head-row {
-	display: none;
+
+
+.timetable {  
+	padding: 0.5vw 2vw 0.5vw 0.5vw; 
+	display: grid;
+	grid-template-columns: 6% 1.5fr 2fr 2fr 2fr 2fr 1fr 2fr 2fr 2fr 2fr 2fr 2fr 2fr 2fr;
+	grid-template-rows: max-content;
+	gap: 0px 1%;
+	grid-auto-flow: row;
+	justify-content: center;
+	grid-template-areas:
+		"day form-grp p1 p2 p3 p4 break p5 p6 p7 p8 p9 lunch p10 p11";
+	text-align: center;
 }
 
-@media (min-width: 992px){
+.timetable.head-row{
+	padding-top: 2vw;
+	padding-bottom: 0.5vw;
+}
 	
-	.timetable {  
-		padding: 0.5vw 2vw 0.5vw 0.5vw; 
-		display: grid;
-		grid-template-columns: 6% 1.5fr 2fr 2fr 2fr 2fr 1fr 2fr 2fr 2fr 2fr 2fr 2fr 2fr 2fr;
-		grid-template-rows: max-content;
-		gap: 0px 1%;
-		grid-auto-flow: row;
-		justify-content: center;
-		grid-template-areas:
-			"day form-grp p1 p2 p3 p4 break p5 p6 p7 p8 p9 lunch p10 p11";
-		text-align: center;
+.day { 
+	grid-area: day; 
+	width: 1fr;
+	/* overflow: hidden;
+	text-overflow: clip; */
+	text-align: left;
+	font-size: 0.9rem;
+}
+
+.form-grp { 
+	grid-area: form-grp; 
+	/* margin-left: 1vw; */
+}
+
+.p1 { grid-area: p1; }
+
+.p2 { grid-area: p2; }
+
+.p3 { grid-area: p3; }
+
+.p4 { grid-area: p4; }
+
+.break { 
+	grid-area: break;
+	/* margin-right: 0.5vw; */
+}
+	
+.p5 { grid-area: p5; }
+
+.p6 { grid-area: p6; }
+
+.p7 { grid-area: p7; }
+
+.p8 { grid-area: p8; }
+
+.p9 { grid-area: p9; }
+
+.lunch { grid-area: lunch; }
+
+.p10 { grid-area: p10; }
+
+.p11 { grid-area: p11; }
+
+.time, .room {
+	font-size: 0.8em;
+	font-family: sans-serif, monospace;
+}
+
+/* Notes Section */
+.note-container{
+	display: flex;
+	flex-direction: row ;
+	padding-top: 1vw;
+	border-top: solid 2px;
+}
+
+.input {
+	min-width: 40%;
+}
+
+
+/* Notes Section */
+.notes {
+	display: block;
+	min-width: 30%;
+}
+.notes-list{
+	list-style: none;
+}
+.note-checkbox {
+	margin-right: 10px;
+}
+.note-text {
+	display: inline-block;
+	flex-grow: 1;
+	/*  overflow settings for long items
+	- prevent any wrapping
+	- hide the overflow
+	- replace with ... to indicate more */
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	/* word-wrap: break-word; */  
+}
+
+.note-delete-btn {
+	float: right;
+	border: none;
+	outline: none;
+	border-radius: 7px;
+	padding: 2px 0.5vw;
+	margin-left: 10px;
+	/* color: #050505; */
+	background-color:lightcoral;
+}
+/* applied when the note item is checked */
+.note-checked { 
+	text-decoration: line-through;
+	color: #63626275;
+	/* background-color: rgba(228, 228, 228, 0.4); */
+	background-color: rgb(245, 245, 245);
+}
+
+.note-item {
+	display: flex;
+	flex-direction: row;
+	/* min-width: 25vw; */
+	/* max-width: 90vw;; */
+	background-color: rgb(204, 204, 204);
+	/* padding: 0.5vw; */
+	font-size: 1.1rem;
+	/* border-top: 1px dashed;
+	border-bottom: 1px dashed; */
 	}
-	
-	.timetable.head-row{
-		padding-top: 2vw;
-		padding-bottom: 0.5vw;
+.todo-item:first-child {
+	border-top-left-radius: 7px;
+	border-top-right-radius: 7px;
+}
+.todo-item:last-child {
+	border-bottom-left-radius: 7px;
+	border-bottom-right-radius: 7px;
+}	
+
+
+
+/* end of med-lrg */
+
+@media (max-width: 834px) {	
+	.timetable{
+		display: block;
+		padding: 0.5vw 0.5vw;
 	}
-	  
-	.day { 
-		grid-area: day; 
-		width: 1fr;
-		/* overflow: hidden;
-		text-overflow: clip; */
-		text-align: left;
-		font-size: 0.9rem;
+	.p1{
+		background-color: aqua;
 	}
-	
-	.form-grp { 
-		grid-area: form-grp; 
-		/* margin-left: 1vw; */
+	.head-row {
+		display: none;
 	}
-	
-	.p1 { grid-area: p1; }
-	
-	.p2 { grid-area: p2; }
-	
-	.p3 { grid-area: p3; }
-	
-	.p4 { grid-area: p4; }
-	
-	.break { 
-		grid-area: break;
-		/* margin-right: 0.5vw; */
-	}
-	  
-	.p5 { grid-area: p5; }
-	
-	.p6 { grid-area: p6; }
-	
-	.p7 { grid-area: p7; }
-	
-	.p8 { grid-area: p8; }
-	
-	.p9 { grid-area: p9; }
-	
-	.lunch { grid-area: lunch; }
-	
-	.p10 { grid-area: p10; }
-	
-	.p11 { grid-area: p11; }
-	
-	.time, .room {
-		font-size: 0.8em;
-		font-family: sans-serif, monospace;
-	}
-	
-	/* Notes Section */
 	.note-container{
-		display: flex;
-		flex-direction: row ;
+		display: block;
+		/* flex-direction: row ; */
 		padding-top: 1vw;
 		border-top: solid 2px;
 	}
-
-	.input {
-		min-width: 40%;
-	}
-	.notes {
-		display: block;
-		min-width: 20vw;
-	}
-	.notes-list{
-		list-style: none;
-	}
-	.note-checkbox {
-		margin-right: 10px;
-	}
-	.note-text {
-		flex-grow: 1;
-		  /*  overflow settings for long items
-		 - prevent any wrapping
-		 - hide the overflow
-		 - replace with ... to indicate more */
-		white-space: nowrap;
-		overflow: hidden;
-		text-overflow: ellipsis;
-		/* word-wrap: break-word; */  
-	}
-
-	.note-delete-btn {
-		float: right;
-		border: none;
-		outline: none;
-		/* border-radius: 7px; */
-		padding: 2px 0.5vw;
-		margin-left: 10px;
-		/* color: #050505; */
-		background-color:lightcoral;
-	}
-	  /* applied when the note item is checked */
-	.note-checked { 
-		text-decoration: line-through;
-		color: #63626275;
-		/* background-color: rgba(228, 228, 228, 0.4); */
-		background-color: rgb(245, 245, 245);
-	
-	}
-
 }
-/* end of med-lrg */

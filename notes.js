@@ -66,7 +66,7 @@ function renderNotes(notes) {
       li.innerHTML = `
             <input type="checkbox" class="note-checkbox" ${checked}>
             <span class="note-text">${item.name}</span>
-            <button class="note-delete-btn far fa-trash-alt">DEL</button>
+            <button class="note-delete-btn">X</button>
       `;
       // finally add the <li> to the <ul>
       noteList.append(li);
