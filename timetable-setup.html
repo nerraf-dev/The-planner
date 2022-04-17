@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Planner</title>
+    <link rel="stylesheet" href="timetable-setup.css">
+</head>
+<body>
+    <h1>The Planner</h1>
+    <h2 class="page-date"></h2>
+    <p> &nbsp; </p>
+        <div class="timetable">
+            <h3>Add your classes and rooms:</h3>
+
+            <form class="class-collection">
+                <input type="text" name="class" class="class" placeholder="Class e.g. 10BICT">
+                <input type="text" name="room" class="room" placeholder="Room e.g. M001">
+                <label>
+                    form group: 
+                 </label>
+                <input type="checkbox" name="form-check" class="form-check">
+                <button type="submit" class="add-class">Add</button>
+            </form>
+        </div>
+
+<div class="container">
+
+       
+<!-- Start of notes section -->
+    <div class="note-container">
+        <div class="input">
+            <h3>Add a note:</h3>
+        <form class="note-form">
+            <textarea class="note-input-text" name="note-input-text" placeholder="Add notes..." cols="33" rows="5"></textarea>
+            <button type="button" class="note-add" name="add">Add</button>
+        </form>
+        </div>
+        
+        <div class="notes">
+            <h3>Notes</h3>
+            <!-- the list-->
+                <ul class="notes-list">
+                    <li>There are currently no notes.</li>
+                <!-- <li class="item" data-key="1594003133171">  
+                        <input class="checkbox" type="checkbox">
+                        <button class="delete-button">X</button>
+                    </li> -->
+                </ul>
+            </div>  
+        </div>
+    </div>
+    <!-- End of notes section -->
+    <!-- <script src="notes.js"></script> -->
+    <script src="timetable-setup.js"></script>
+</body>
+</html>

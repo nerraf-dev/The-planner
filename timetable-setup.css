@@ -1,0 +1,48 @@
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html{
+	font-size: 16px;
+}
+body{
+	margin: 1vw;
+	font-size: 1rem;
+	font-family: Helvetica, Arial, sans-serif;
+}
+
+.container{
+	width: 100%;
+	padding: 1vw;
+}
+/* Style the form - display items horizontally */
+.class-collection {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+}
+
+.class-collection input{
+    vertical-align: middle;
+    margin: 5px 10px 5px 0;
+    padding: 10px;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid #ddd;
+}
+.class-collection label{
+    margin-right: 0.5em;
+}
+
+/* Style the submit button */
+.class-collection button {
+    padding: 10px 20px;
+    background-color: dodgerblue;
+    border: 1px solid #ddd;
+    color: white;
+  }
+  
+  .class-collection button:hover {
+    background-color: royalblue;
+  }
